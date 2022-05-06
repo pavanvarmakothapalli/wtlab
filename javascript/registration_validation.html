@@ -1,0 +1,157 @@
+<html>
+
+    <head>
+
+               <title>Validations</title>
+
+        <script>
+
+            function validateFields()
+
+            {
+
+                var valid=false;
+
+                var username=document.forms[0].elements[0].value;
+
+                var password=document.forms[0].elements[1].value;
+
+                var emailid=document.forms[0].elements[2].value;
+
+                var phno=document.forms[0].elements[3].value;
+
+                var username_va=new RegExp("[a-z A-Z \.]{10,}","g");
+
+                var password_va=new RegExp("^[A-Z][0-9 a-z A-Z]{6,11}","g");
+
+                var emailid_va=/[\w_|\.]+@[\w]+\.[a-z]/;
+
+                var phno_va=new RegExp("[0-9]{10}");
+
+                if(username.match(username_va))
+
+                {
+
+                    if(password.match(password_va))
+
+                    {
+
+                        if(emailid.match(emailid_va))
+
+                        {
+
+                            if(phno.match(phno_va))
+
+                            {
+
+                                alert("All field values you entered are correct");
+
+                                valid=true;
+
+                            }
+
+                            else{
+
+                                alert("Phone number is invalid");
+
+                            }
+
+                        }
+
+                        else{
+
+                                alert("Email-id is invalid");
+
+                            }
+
+                    }
+
+                    else{
+
+                                alert("Password is invalid");
+
+                            }
+
+                }
+
+                else{
+
+                                alert("Username is invalid");
+
+                            }
+
+                        }
+
+            
+
+        </script>
+
+    </head>
+
+    <body bgcolor="lightslategray">
+
+            <h1><center>REGISTRATION FORM</center></h1>
+
+            <form action="#" method="post">
+
+                <table width="100%" border=0>
+
+                    <tr>
+
+                        <th>Name:</th>
+
+                        <td>
+
+                            <input type="text" name="tx">
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Password:</th>
+
+                        <td>
+
+                            <input type="password" name="pwd1">
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Email-id:</th>
+
+                        <td>
+
+                            <input type="text" name="tx1">
+
+                         </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Phone number:</th>
+
+                        <td>
+
+                            <input type="text" name="tx2">
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><center><input type="reset" value="RESET" name="reset"></center></td>
+
+                        <td><input type="submit" value="SUBMIT" name="submit" onclick="validateFields()"></td>
+
+                    </tr>
+
+    </body>
+
+</html>

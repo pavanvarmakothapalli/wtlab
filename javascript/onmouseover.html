@@ -1,0 +1,32 @@
+<html>
+<head>
+<script language="javascript">
+function img1()
+{
+document.getElementById("i1").src="image2.jpg";
+}
+function img2()
+{
+document.getElementById("i1").src="image1.jpg";
+}
+function fun1()
+{
+    document.getElementById("h11").innerText="You Clicked on Text";
+}
+function cse()
+{
+document.getElementById("h12").innerText=" This is CSE";
+}
+</script></head>
+<body>
+<center>
+<img src="image1.jpg" id="i1" onmouseover="img1()" onmouseout="img2()">
+</center>
+
+
+<h1 id="h11" onclick="fun1()">Click on Text</h1> 
+<p id ="h12" onclick="cse()"> This is SRKR </p>
+
+</body>
+
+</html>

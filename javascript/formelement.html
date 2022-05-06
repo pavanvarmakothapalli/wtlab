@@ -1,0 +1,25 @@
+<html>
+<head>
+<script>
+function value()
+{
+var a = f1.t1.value;
+var b = document.forms[0].elements[1].value;
+var c = a*b;
+document.write(a);
+document.write(b);
+document.write("the product is:",c);
+
+}
+</script>
+</head>
+<body>
+<form name="f1" onsubmit="value()">
+<input type="text" name="t1">
+<input type="text" name="t2">
+<input type="submit" value="submit">
+
+</form>
+</body>
+
+</html>

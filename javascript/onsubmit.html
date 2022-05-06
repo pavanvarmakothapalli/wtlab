@@ -1,0 +1,28 @@
+<html>
+ <head>
+ <script language="javascript"> 
+function fun1()
+ {
+  n=parseInt(f1.t1.value);
+ document.writeln("Even Numbers from 1 to "+n+" are:"); 
+ for(i=1;i<=n;i++)
+  {   
+     if(i%2==0)
+         document.write(i+" ");
+  } 
+
+} 
+</script> 
+</head>
+<body>
+ <form name="f1" onSubmit="fun1()">
+ <label>ENTER A NUMBER:</label>
+ <input type="text" name="t1">
+ <br>
+ <input type="submit" value="Submit">
+ </form>
+ </body>
+ </html>
+
+
+
